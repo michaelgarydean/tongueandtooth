@@ -1,0 +1,330 @@
+/*
+* ===========
+* DEFINITIONS
+* ===========
+*/
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./fonts/neuemontreal-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+/*
+* ========
+* ELEMENTS
+* ========
+*/
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Neue Montreal", Helvetica, Ariel, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  color: #BFB8AA;
+  text-transform: uppercase;
+  background-color: #080808;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #687373;
+  background-color: #3B4E59;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  cursor: inherit;
+}
+
+a:hover {
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+q {
+  font-style: italic;
+}
+
+footer {
+  padding: calc(30px / 2);
+}
+footer h1 {
+  margin: 0;
+  font-size: 0.5em;
+}
+
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+.body-content {
+  min-height: 100vh;
+}
+
+.button-cta > .email-cta {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+address .email-cta {
+  font-weight: bold;
+  font-size: 1em;
+  color: #3B4E59;
+}
+
+/* Containers */
+.container-title-card {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container-headline {
+  font-size: 1em;
+}
+
+/* padding around all content */
+.container {
+  position: relative;
+  min-height: 100vh;
+  text-align: left;
+}
+.container > div {
+  padding: 20px 30px;
+}
+
+/* Headings */
+.heading-big {
+  color: #BFB8AA;
+  margin: 0;
+}
+
+.projects-headline {
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #BFB8AA;
+}
+
+.sub-title {
+  font-size: 0.73em;
+  font-weight: 500;
+}
+
+.heading-project-title {
+  font-size: 2em;
+}
+
+/* Text */
+.text-accented {
+  font-weight: bold;
+}
+
+/* Mailchimp */
+.mc-field-group, .mce-responses, .clear {
+  display: inline;
+}
+
+/* For the menu items */
+.big-link {
+  font-weight: 500;
+}
+
+.big-link:hover, .big-link:focus {
+  /* make it white on hover */
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  cursor: url("./assets/icons/x-cursor.svg") 16 16, auto;
+}
+
+.important-link {
+  font-size: 2em;
+  font-weight: bold;
+  color: #687373;
+}
+
+.menu-icon {
+  height: 48px;
+  width: 48px;
+  content: url("./assets/icons/closed-menu.svg");
+}
+
+.social-media-icons {
+  text-align: center;
+}
+
+/* header shown on pages navigating away from main/home menu */
+.site-header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 0 30px;
+}
+.site-header .main-menu-closed {
+  float: right;
+  margin: 0 30px;
+}
+
+.site-footer {
+  display: none;
+}
+
+/* Media Queries */
+/* Small devices (landscape phones, less than 768px) */
+/* Medium devices (tablets, less than 992px) */
+/* Large devices (desktops, less than 1200px) */
+/*
+* ========
+* PAGES
+* ========
+*/
+/* HOMEPAGE */
+/* Buy music club */
+#buy-music-club {
+  margin: 0 auto;
+  padding-top: 10vh;
+  width: 50%;
+}
+
+.container-contrast {
+  background-color: #080808;
+}
+
+.header-site-title {
+  margin-bottom: 10vh;
+}
+
+.heading-site-title {
+  line-height: 1em;
+}
+
+.container-project-preview {
+  margin: 50vh 0;
+}
+
+/* Media Queries */
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .container-site-title {
+    max-width: 9.2em;
+  }
+
+  .heading-site-title {
+    font-size: calc(12px + 20vw);
+  }
+
+  .projects-headline {
+    font-size: calc(12px + 10vw);
+    display: none;
+  }
+
+  .container-project-preview {
+    margin: 10vh 0;
+  }
+
+  .heading-project-title {
+    font-size: 1em;
+  }
+
+  .container-project-description {
+    font-size: 0.75em;
+  }
+
+  .heading-big {
+    font-size: 2em;
+  }
+
+  .container-footer {
+    font-size: 0.75em;
+  }
+
+  .sub-title {
+    font-size: 0.66em;
+  }
+}
+/* Medium devices (tablets, less than 992px) */
+/* Large devices (desktops, less than 1200px) */
+/*
+* ==========
+* ANIMATIONS
+* ==========
+*/
+.fadein-on-load {
+  /* Animate Fade out of title text */
+  animation-name: fadein;
+  animation-duration: calc(3s/3);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.fadeout-on-delay {
+  /* Animate Fade out of title text */
+  animation-name: fadeout;
+  animation-delay: calc(3s - 1s);
+  animation-duration: calc(3s/3);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

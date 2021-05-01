@@ -1,0 +1,424 @@
+$root_path: './';
+$assets_path: $root_path + 'assets/';
+
+$cursor_icon: $assets_path + 'icons/x-cursor.svg';
+$menu_icon: $assets_path + 'icons/closed-menu.svg';
+
+$menu_icon_size: 48px;
+
+$side_margin_outer: 30px;
+$vertical_margin_outer: 20px;
+
+$side_margin_inner: $menu_icon_size + $side_margin_outer;
+
+$intro_animation_length: 3s;
+
+$font_color_main: #BFB8AA;
+$font_color_secondary: #687373;
+$font_color_light: #BFB8AA;
+$font_color_accent: #3B4E59;
+
+$font_color_hover: #3B4E59;
+
+$background_color_main: #080808;
+$background_color_contrast: #080808;
+
+/*
+* ===========
+* DEFINITIONS
+* ===========
+*/
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-thin.woff") format("woff");
+  	font-weight: 100;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-regular.woff") format("woff");
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-medium.woff") format("woff");
+  	font-weight: 500;
+  	font-style: normal;
+}
+
+@font-face {
+	font-family: "Neue Montreal";
+	src: url($root_path + "fonts/neuemontreal-bold.woff") format("woff");
+  	font-weight: bold;
+  	font-style: normal;
+}
+
+/*
+* ========
+* ELEMENTS
+* ========
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Neue Montreal", Helvetica, Ariel, sans-serif;
+	font-size: 2em;
+	font-weight: 100;
+	color: $font_color_main;
+
+	text-transform: uppercase;
+
+	background-color: $background_color_main;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+  display: inline-block;
+
+  padding: 15px 32px;
+  margin: 4px 2px;
+
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  
+  color: $font_color_secondary;
+  background-color: $font_color_accent;
+
+  cursor: pointer;
+
+}
+
+
+
+h1 {
+	font-size: 2em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+a {
+	text-decoration: underline;
+	color: inherit;
+	cursor: inherit;
+}
+
+a:hover {
+	opacity: 0.25;
+	cursor: pointer;
+}
+
+q {
+	font-style: italic;
+}
+
+footer {
+	padding: calc(#{$side_margin_outer} / 2);
+	
+	h1 {
+		margin: 0;
+		font-size: 0.5em;
+	}
+}
+
+/*
+* ========
+* SITEWIDE
+* ========
+*/
+
+.body-content {
+	min-height: 100vh;
+}
+
+
+
+
+.button-cta > .email-cta {
+
+		text-decoration: none;
+}
+
+address {
+	font-style: normal;
+
+	.email-cta {
+		font-weight: bold;
+		font-size: 1em;
+		color: $font_color_accent;
+	}
+}
+
+/* Containers */
+.container-eyeline {
+}
+
+.container-title-card {
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container-headline {
+	font-size: 1em;
+}
+
+/* padding around all content */
+.container {
+	position: relative;
+	min-height: 100vh;
+
+	text-align: left;
+
+	> div {
+
+		padding: $vertical_margin_outer $side_margin_outer;
+	}
+}
+
+/* Headings */
+.heading-big {
+	color: $font_color_light;
+	margin: 0;
+}
+
+.projects-headline {
+	font-size: 3em;
+	text-transform: uppercase;
+	color: $font_color_light
+}
+
+.sub-title {
+	font-size: 0.73em;
+	font-weight: 500;
+}
+
+.heading-project-title {
+	font-size: 2em;
+}
+
+.header-footer-title {
+}
+
+/* Text */
+.text-accented {
+	font-weight: bold;
+}
+
+.text-credit {
+
+}
+
+/* Mailchimp */
+.mc-field-group, .mce-responses, .clear {
+	display: inline;
+}
+
+
+
+/* For the menu items */
+.big-link {
+	font-weight: 500;
+}
+
+.big-link:hover, .big-link:focus {
+
+	/* make it white on hover */
+	filter: brightness(0) invert(1);
+
+  	cursor: pointer;
+  	cursor: url($cursor_icon) 16 16,  auto;
+}
+
+.important-link {
+	font-size: 2em;
+	font-weight: bold;
+	color: $font_color_secondary;
+}
+
+.menu-icon {
+    height: $menu_icon_size;
+    width: $menu_icon_size;
+
+	content: url($menu_icon);
+}
+
+
+.social-media-icons {
+  text-align: center;
+}
+
+/* header shown on pages navigating away from main/home menu */
+.site-header {
+	position: fixed;
+	z-index: 1;
+
+	width: 100vw;
+	padding: 0 $side_margin_outer;
+
+	.main-menu-closed {
+
+		float: right;
+		margin: 0 $side_margin_outer;
+	}
+}
+
+.site-footer {
+	display: none;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) { 
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/*
+* ========
+* PAGES
+* ========
+*/
+
+/* HOMEPAGE */
+
+/* Buy music club */
+#buy-music-club {
+	margin:0 auto;
+	padding-top: 10vh;
+	width: 50%;
+}
+
+.container-contrast {
+	background-color: $background_color_contrast;
+}
+
+.header-site-title {
+	margin-bottom: 10vh;
+}
+
+.heading-site-title {
+	line-height: 1em;
+}
+
+.container-project-preview {
+	margin: 50vh 0;
+}
+
+.container-project-description {
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) { 
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+	.container-site-title {
+		max-width: 9.2em;
+	}
+	.heading-site-title {
+	    font-size: calc(12px + 20vw);
+	}
+
+	.projects-headline {
+	    font-size: calc(12px + 10vw);
+	    display: none;
+	}
+
+	.container-project-preview {
+   		margin: 10vh 0;
+	}
+
+	.heading-project-title {
+    	font-size: 1em;
+	}
+
+	.container-project-description {
+		font-size: 0.75em;
+	}
+
+	.heading-big {
+    	font-size: 2em;
+	}
+
+	.container-footer {
+		font-size: 0.75em;
+	}
+
+	.sub-title {
+		font-size: 0.66em;
+	}
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/*
+* ==========
+* ANIMATIONS
+* ==========
+*/
+
+.fadein-on-load {
+	/* Animate Fade out of title text */
+	animation-name: fadein;
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+.fadeout-on-delay {
+	/* Animate Fade out of title text */
+	animation-name: fadeout;
+ 	animation-delay: calc(#{$intro_animation_length} - #{$intro_animation_length/3});
+ 	animation-duration: calc(#{$intro_animation_length}/3);
+ 	animation-timing-function: ease-in-out;
+ 	animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    from 	{ opacity: 1; }
+    to 		{ opacity: 0; }
+}
+
+@keyframes fadein {
+    from 	{ opacity: 0; }
+    to   	{ opacity: 1; }
+}
